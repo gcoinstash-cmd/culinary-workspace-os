@@ -21,7 +21,7 @@ export default function IntegrationLayer() {
         </div>
         <div className="flex items-center gap-2 px-3 py-1 bg-gold-400/10 border border-gold-400/20 rounded-full shrink-0">
           <Lock className="w-3.5 h-3.5 text-gold-400" />
-          <span className="font-mono text-[10px] uppercase tracking-wider text-gold-400 font-medium">Ready but Paused</span>
+          <span className="font-mono text-xs font-semibold tracking-wider uppercase tracking-wider text-gold-400 font-medium">Ready but Paused</span>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export default function IntegrationLayer() {
               <div className="p-2.5 bg-neutral-900 border border-white/5 text-gold-400 rounded-none group-hover:border-gold-400/30 transition-all">
                 <Link className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] tracking-wider text-neutral-500 uppercase">CRM Sync</span>
+              <span className="font-mono text-xs font-semibold tracking-wider tracking-wider text-neutral-500 uppercase">CRM Sync</span>
             </div>
             <h3 className="font-serif text-lg text-white mb-2">HoneyBook & Dubsado Webhook</h3>
             <p className="text-xs text-neutral-400 leading-relaxed mb-6">
@@ -43,7 +43,7 @@ export default function IntegrationLayer() {
             </p>
           </div>
           <div className="border-t border-white/5 pt-4">
-            <p className="text-[11px] font-mono text-neutral-500 leading-snug">
+            <p className="text-xs font-semibold font-mono text-neutral-500 leading-snug">
               ⚠️ <span className="text-gold-400 font-medium">Integration Disabled</span>: Requires custom external server routing and unique workspace security handshake protocols.
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function IntegrationLayer() {
               <div className="p-2.5 bg-neutral-900 border border-white/5 text-gold-400 rounded-none group-hover:border-gold-400/30 transition-all">
                 <FileCheck className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] tracking-wider text-neutral-500 uppercase">E-Sign API</span>
+              <span className="font-mono text-xs font-semibold tracking-wider tracking-wider text-neutral-500 uppercase">E-Sign API</span>
             </div>
             <h3 className="font-serif text-lg text-white mb-2">DocuSign Contract Pipeline</h3>
             <p className="text-xs text-neutral-400 leading-relaxed mb-6">
@@ -64,7 +64,7 @@ export default function IntegrationLayer() {
             </p>
           </div>
           <div className="border-t border-white/5 pt-4">
-            <p className="text-[11px] font-mono text-neutral-500 leading-snug">
+            <p className="text-xs font-semibold font-mono text-neutral-500 leading-snug">
               ⚠️ <span className="text-gold-400 font-medium">Integration Disabled</span>: Requires certified DocuSign Integrator Key and docusign-esign Node module handshake.
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function IntegrationLayer() {
               <div className="p-2.5 bg-neutral-900 border border-white/5 text-gold-400 rounded-none group-hover:border-gold-400/30 transition-all">
                 <CreditCard className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] tracking-wider text-neutral-500 uppercase">Fintech</span>
+              <span className="font-mono text-xs font-semibold tracking-wider tracking-wider text-neutral-500 uppercase">Fintech</span>
             </div>
             <h3 className="font-serif text-lg text-white mb-2">Stripe 50% Deposit Invoice</h3>
             <p className="text-xs text-neutral-400 leading-relaxed mb-6">
@@ -85,7 +85,7 @@ export default function IntegrationLayer() {
             </p>
           </div>
           <div className="border-t border-white/5 pt-4">
-            <p className="text-[11px] font-mono text-neutral-500 leading-snug">
+            <p className="text-xs font-semibold font-mono text-neutral-500 leading-snug">
               ⚠️ <span className="text-gold-400 font-medium">Integration Disabled</span>: Requires active Stripe webhook signatures and private Stripe secret keys configured on standard server.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function IntegrationLayer() {
       </div>
 
       {/* Decorative Architecture Wire */}
-      <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-neutral-500 font-mono text-[10px]">
+      <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-neutral-500 font-mono text-xs font-semibold tracking-wider">
         <div className="flex items-center gap-1">
           <Sparkles className="w-3 h-3 text-gold-400 animate-pulse" />
           <span>VAULT ARCHIVE_ID: SYNC_2026_X</span>

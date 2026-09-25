@@ -146,7 +146,7 @@ export default function MenuBuilder({
         
         <button
           onClick={startAddNew}
-          className="self-start md:self-auto flex items-center gap-1.5 px-4 py-2 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-xs uppercase tracking-wider font-semibold transition-colors"
+          className="self-start md:self-auto flex items-center gap-1.5 px-5 py-3 min-h-[44px] bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] uppercase tracking-wider font-semibold transition-colors"
         >
           <Plus className="w-4 h-4" /> Add Lookbook Course
         </button>
@@ -227,7 +227,7 @@ export default function MenuBuilder({
 
                     {/* Quick Cost display top right (unless Client View on) */}
                     {!isClientView && (
-                      <span className="absolute top-4 right-4 font-mono text-[10px] bg-gold-400 text-neutral-950 px-2 py-0.5 font-semibold">
+                      <span className="absolute top-4 right-4 font-mono text-xs font-semibold tracking-wider bg-gold-400 text-neutral-950 px-2 py-0.5 font-semibold">
                         ${item.costPerServing.toFixed(2)}
                       </span>
                     )}
@@ -240,7 +240,7 @@ export default function MenuBuilder({
                       <h4 className="font-serif text-xl text-white group-hover:text-gold-400 transition-colors tracking-wide leading-tight">
                         {item.name}
                       </h4>
-                      <p className="text-[11px] text-neutral-400 line-clamp-2 mt-1.5 leading-relaxed font-sans">
+                      <p className="text-xs font-semibold text-neutral-400 line-clamp-2 mt-1.5 leading-relaxed font-sans">
                         {item.description}
                       </p>
                     </div>
@@ -255,7 +255,7 @@ export default function MenuBuilder({
                 <p className="text-sm">No lookbook offerings recorded in this progression category.</p>
                 <button
                   onClick={startAddNew}
-                  className="mt-2 text-xs text-gold-400 font-mono tracking-wider uppercase hover:underline"
+                  className="mt-2 text-base font-semibold min-h-[44px] text-gold-400 font-mono tracking-wider uppercase hover:underline"
                 >
                   Create a Course Now
                 </button>
@@ -286,7 +286,7 @@ export default function MenuBuilder({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                   Dish Title
                 </label>
                 <input
@@ -301,7 +301,7 @@ export default function MenuBuilder({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Category
                   </label>
                   <select
@@ -318,7 +318,7 @@ export default function MenuBuilder({
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Prep Complexity
                   </label>
                   <select
@@ -336,7 +336,7 @@ export default function MenuBuilder({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                   Cost Per Serving ($)
                 </label>
                 <input
@@ -352,7 +352,7 @@ export default function MenuBuilder({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                   Dish Narrative / Editorial Description
                 </label>
                 <textarea
@@ -367,7 +367,7 @@ export default function MenuBuilder({
 
               <div className="space-y-1">
                 <div className="flex justify-between items-center">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Key Ingredients
                   </label>
                   <span className="font-mono text-[9px] text-neutral-500">Comma separated</span>
@@ -384,7 +384,7 @@ export default function MenuBuilder({
 
               {/* Lookbook Preset Selector for visuals */}
               <div className="space-y-2 pt-1">
-                <span className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                <span className="block text-xs font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                   Select Portfolio Plating Cover
                 </span>
                 <div className="grid grid-cols-6 gap-2.5">
@@ -404,7 +404,7 @@ export default function MenuBuilder({
                     );
                   })}
                 </div>
-                <div className="mt-2 text-[10px] text-neutral-500 leading-snug">
+                <div className="mt-2 text-xs font-semibold tracking-wider text-neutral-500 leading-snug">
                   📌 Custom image assets are matched with safe placeholder portfolio links for seamless compilation.
                 </div>
               </div>
@@ -416,13 +416,13 @@ export default function MenuBuilder({
                     setIsAdding(false);
                     setIsEditing(false);
                   }}
-                  className="px-4 py-2 bg-[#161616] text-[11px] font-mono uppercase tracking-widest text-neutral-300 hover:text-white transition-colors"
+                  className="px-4 py-2 bg-[#161616] text-xs font-semibold font-mono uppercase tracking-widest text-neutral-300 hover:text-white transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-[11px] uppercase tracking-widest font-semibold transition-colors"
+                  className="px-5 py-2 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] font-semibold uppercase tracking-widest font-semibold transition-colors"
                 >
                   Publish Course
                 </button>
@@ -448,7 +448,7 @@ export default function MenuBuilder({
               <div className="flex justify-between items-start gap-4">
                 <div>
                   <h3 className="text-2xl font-serif text-white tracking-tight">{selectedItem.name}</h3>
-                  <span className="font-mono text-[10px] tracking-wider text-neutral-400 uppercase block mt-1">
+                  <span className="font-mono text-xs font-semibold tracking-wider tracking-wider text-neutral-400 uppercase block mt-1">
                     Database ID: {selectedItem.id}
                   </span>
                 </div>
@@ -481,7 +481,7 @@ export default function MenuBuilder({
 
               <div className="grid grid-cols-2 gap-4 border-t border-b border-white/5 py-5 text-left">
                 <div>
-                  <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block">
+                  <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block">
                     Complexity
                   </span>
                   {isClientView ? (
@@ -502,7 +502,7 @@ export default function MenuBuilder({
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block">
+                  <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block">
                     Unit Plate Cost
                   </span>
                   {isClientView ? (
@@ -519,14 +519,14 @@ export default function MenuBuilder({
 
               {/* Key Ingredients breakdown */}
               <div className="space-y-3 pt-1">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block">
                   Key Ingredients & Matrix Triggers
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {selectedItem.keyIngredients.map((ing, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 bg-[#1a1a1a] text-[11px] font-sans text-neutral-300 border border-white/5"
+                      className="px-2.5 py-1 bg-[#1a1a1a] text-xs font-semibold font-sans text-neutral-300 border border-white/5"
                     >
                       {ing}
                     </span>

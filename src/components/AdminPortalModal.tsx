@@ -53,7 +53,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
     'mise-en-place': 'text-amber-400 bg-amber-400/10 border-amber-400/30',
     'prep-ready': 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
     'confirmed': 'text-sky-400 bg-sky-400/10 border-sky-400/30',
-    'review': 'text-zinc-500 bg-zinc-500/10 border-zinc-700',
+    'review': 'text-zinc-300 bg-zinc-500/10 border-zinc-700',
   };
 
   return (
@@ -66,11 +66,11 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
               <Utensils className="h-5 w-5 text-amber-400" />
             </div>
             <div>
-              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">Culinary Operational Workspace OS</p>
+              <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest">Culinary Operational Workspace OS</p>
               <h2 className="text-sm font-bold text-white uppercase tracking-wider">Executive Chef Command Gate</h2>
             </div>
           </div>
-          <button onClick={onClose} className="flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-800 text-zinc-500 hover:text-white transition-all cursor-pointer">
+          <button onClick={onClose} className="flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-800 text-zinc-300 hover:text-white transition-all cursor-pointer">
             <X className="h-4 w-4" />
           </button>
         </div>
@@ -85,7 +85,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider mt-4">BOH Executive Access</h3>
-                <p className="text-xs text-zinc-400 font-mono max-w-xs mx-auto">Master kitchen operational matrix & banquet management. Enter chef passkey or use 1-click bypass demo.</p>
+                <p className="text-base text-zinc-200 leading-relaxed font-mono max-w-xs mx-auto">Master kitchen operational matrix & banquet management. Enter chef passkey or use 1-click bypass demo.</p>
               </div>
 
               <div className="w-full max-w-sm space-y-3">
@@ -98,7 +98,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                   className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm text-white font-mono focus:outline-none focus:border-amber-500/50 placeholder:text-zinc-700"
                 />
                 {authError && <p className="text-xs text-red-400 font-mono">{authError}</p>}
-                <button onClick={handleAuth} className="w-full rounded-lg bg-amber-500 py-3 text-sm font-bold uppercase tracking-wider text-black hover:bg-amber-400 transition-all cursor-pointer shadow-[0_0_20px_rgba(245,158,11,0.25)]">
+                <button onClick={handleAuth} className="w-full rounded-lg bg-amber-500 py-3 text-base font-bold min-h-[44px] uppercase tracking-wider text-black hover:bg-amber-400 transition-all cursor-pointer shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                   Unlock Kitchen Matrix
                 </button>
                 <button
@@ -122,7 +122,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                     key={id}
                     onClick={() => setActiveTab(id)}
                     className={`flex-1 flex items-center justify-center gap-1.5 rounded-md py-2 text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
-                      activeTab === id ? 'bg-amber-500 text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
+                      activeTab === id ? 'bg-amber-500 text-black font-bold' : 'text-zinc-300 hover:text-zinc-300'
                     }`}
                   >
                     <Icon className="h-3 w-3" />
@@ -138,7 +138,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                       <div key={label} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 space-y-2">
                         <Icon className={`h-4 w-4 ${color}`} />
                         <p className={`text-xl font-bold font-mono ${color}`}>{value}</p>
-                        <p className="text-[10px] text-zinc-500 uppercase tracking-wider">{label}</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-wider">{label}</p>
                       </div>
                     ))}
                   </div>
@@ -149,7 +149,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                       <div key={b.id} className="flex items-center justify-between py-2 border-b border-zinc-800/60 last:border-0">
                         <div>
                           <p className="text-xs font-bold text-white">{b.host}</p>
-                          <p className="text-[10px] text-zinc-400 font-mono mt-0.5">{b.type} · {b.date}</p>
+                          <p className="text-xs font-semibold tracking-wider text-zinc-400 font-mono mt-0.5">{b.type} · {b.date}</p>
                         </div>
                         <div className="text-right">
                           <p className="text-sm font-bold font-mono text-amber-400">${b.spend.toLocaleString()}</p>
@@ -167,11 +167,11 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                     <div key={b.id} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 flex items-center justify-between gap-3">
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-mono text-zinc-500">{b.id}</span>
+                          <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300">{b.id}</span>
                           <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded border uppercase ${statusColors[b.status]}`}>{b.status}</span>
                         </div>
                         <p className="text-sm font-bold text-white">{b.host}</p>
-                        <p className="text-xs text-zinc-400 font-mono">{b.type} · {b.date}</p>
+                        <p className="text-base text-zinc-200 leading-relaxed font-mono">{b.type} · {b.date}</p>
                       </div>
                       <p className="text-lg font-bold text-amber-400 font-mono">${b.spend.toLocaleString()}</p>
                     </div>
@@ -201,7 +201,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
               {activeTab === 'settings' && (
                 <div className="space-y-4">
                   <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-5 space-y-3">
-                    <h4 className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Master Capstone Specifications</h4>
+                    <h4 className="text-xs font-mono text-zinc-300 uppercase tracking-widest">Master Capstone Specifications</h4>
                     {[
                       { label: 'Product Role', value: 'Phase 1 Milestone Capstone (Product #50 of 50)' },
                       { label: 'Chef Passkey', value: 'culinary2026' },
@@ -210,7 +210,7 @@ export default function AdminPortalModal({ isOpen, onClose, onSelectTab }: Admin
                       { label: 'Agency Vault Value', value: '$2,999 Whitelabel License (50 Apps Included)' },
                     ].map(({ label, value }) => (
                       <div key={label} className="flex justify-between items-center py-2 border-b border-zinc-800/60 last:border-0">
-                        <span className="text-xs text-zinc-500 font-mono uppercase">{label}</span>
+                        <span className="text-xs text-zinc-300 font-mono uppercase">{label}</span>
                         <span className="text-xs text-amber-300 font-mono font-bold">{value}</span>
                       </div>
                     ))}

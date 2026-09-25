@@ -157,7 +157,7 @@ export default function DietaryMatrix({
             </div>
             <button
               onClick={startAddNew}
-              className="flex items-center gap-1 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-[11px] uppercase tracking-wider px-3 py-1.5 font-semibold transition-colors shrink-0"
+              className="flex items-center gap-1 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] font-semibold uppercase tracking-wider px-3 py-1.5 font-semibold transition-colors shrink-0"
             >
               <Plus className="w-3.5 h-3.5" /> Log Profile
             </button>
@@ -217,7 +217,7 @@ export default function DietaryMatrix({
                   )}
                 </div>
 
-                <p className="text-[11px] font-mono text-neutral-400 truncate flex items-center gap-1.5">
+                <p className="text-xs font-semibold font-mono text-neutral-400 truncate flex items-center gap-1.5">
                   <Calendar className="w-3 h-3 text-gold-400" />
                   {getBookingName(record.bookingId)}
                 </p>
@@ -225,17 +225,17 @@ export default function DietaryMatrix({
                 {/* Badges preview */}
                 <div className="mt-4 flex flex-wrap gap-1.5 border-t border-white/5 pt-3">
                   {record.preference !== DietaryPreference.None && (
-                    <span className="px-1.5 py-0.5 bg-gold-400/10 border border-gold-300/30 text-[10px] font-mono uppercase text-gold-400">
+                    <span className="px-1.5 py-0.5 bg-gold-400/10 border border-gold-300/30 text-xs font-semibold tracking-wider font-mono uppercase text-gold-400">
                       {record.preference}
                     </span>
                   )}
                   {record.criticalAllergies.map((all, id) => (
-                    <span key={id} className="px-1.5 py-0.5 bg-neutral-900 border border-white/5 text-[10px] text-neutral-300">
+                    <span key={id} className="px-1.5 py-0.5 bg-neutral-900 border border-white/5 text-xs font-semibold tracking-wider text-neutral-300">
                       {all}
                     </span>
                   ))}
                   {record.criticalAllergies.length === 0 && record.preference === DietaryPreference.None && (
-                    <span className="text-[11px] text-neutral-500 italic">No dietary restrictions recorded</span>
+                    <span className="text-xs font-semibold text-neutral-500 italic">No dietary restrictions recorded</span>
                   )}
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function DietaryMatrix({
             <div className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Guest Name / Label
                   </label>
                   <input
@@ -289,7 +289,7 @@ export default function DietaryMatrix({
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Associated Dining Event
                   </label>
                   <select
@@ -308,7 +308,7 @@ export default function DietaryMatrix({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                     Lifestyle/Dietary Preference
                   </label>
                   <select
@@ -326,7 +326,7 @@ export default function DietaryMatrix({
 
                 <div className="space-y-1">
                   <div className="flex justify-between items-center">
-                    <label className="block text-[10px] font-mono uppercase tracking-wider text-neutral-400">
+                    <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-neutral-400">
                       Critical Allergens
                     </label>
                     <span className="font-mono text-[9px] text-neutral-500">Comma separated</span>
@@ -356,13 +356,13 @@ export default function DietaryMatrix({
                   setIsAdding(false);
                   setIsEditing(false);
                 }}
-                className="px-4 py-2 bg-[#161616] text-[11px] font-mono uppercase tracking-widest text-[#9b9b9b] hover:text-white transition-colors"
+                className="px-4 py-2 bg-[#161616] text-xs font-semibold font-mono uppercase tracking-widest text-[#9b9b9b] hover:text-white transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-[11px] uppercase tracking-widest font-semibold transition-colors"
+                className="px-5 py-3 min-h-[44px] bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] font-semibold uppercase tracking-widest font-semibold transition-colors"
               >
                 Save Profile
               </button>
@@ -409,7 +409,7 @@ export default function DietaryMatrix({
             {/* Preference & Allergies Info Box */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#0a0a0a]/40 p-6 border border-white/5">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block">
                   Dietary Protocol
                 </span>
                 <span className="text-lg font-serif text-white">
@@ -420,7 +420,7 @@ export default function DietaryMatrix({
               </div>
 
               <div className="space-y-1">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block">
                   Critical Allergens Registered
                 </span>
                 <div className="flex flex-wrap gap-1.5 mt-1">

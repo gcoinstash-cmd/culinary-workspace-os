@@ -145,7 +145,7 @@ export default function App() {
               <span className="font-mono text-[9px] uppercase tracking-wider text-neutral-400 block font-medium">
                 Client View Override
               </span>
-              <span className="text-[10px] text-neutral-500 block">
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 block">
                 {isClientView ? "Confidential Metrics Hidden" : "Full Ledger Mode"}
               </span>
             </div>
@@ -313,12 +313,12 @@ export default function App() {
             <span className="font-serif text-sm text-neutral-300 tracking-wider">
               MAISON <span className="text-gold-400 italic">Culinaire</span>
             </span>
-            <p className="font-mono text-[10px] text-neutral-600">
+            <p className="font-mono text-xs font-semibold tracking-wider text-neutral-600">
               PRISTINE CATERING WORKSPACE & DATABASE ENVIRONMENT
             </p>
           </div>
 
-          <div className="text-center md:text-right font-mono text-[10px] space-y-1">
+          <div className="text-center md:text-right font-mono text-xs font-semibold tracking-wider space-y-1">
             <p className="text-neutral-600">SYSTEM ARCHITECTURE: STATIC INTEGRITY COMPILATION</p>
             <p className="text-neutral-500">
               © {new Date().getFullYear()} MAISON CULINAIRE. DESIGN FOR LUXURY DINING.

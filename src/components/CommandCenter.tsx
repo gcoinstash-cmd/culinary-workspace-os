@@ -58,7 +58,7 @@ export default function CommandCenter({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* KPI 1: Revenue (SaaS Model) or Masked Safe */}
         <div className="border border-white/5 bg-[#121212] p-6 shadow-sm transition-all duration-300">
-          <div className="flex items-center justify-between text-neutral-400 font-mono text-[10px] uppercase tracking-widest mb-4">
+          <div className="flex items-center justify-between text-neutral-400 font-mono text-xs font-semibold tracking-wider uppercase tracking-widest mb-4">
             <span>Financial Pipeline</span>
             <DollarSign className="w-4 h-4 text-gold-400" />
           </div>
@@ -85,7 +85,7 @@ export default function CommandCenter({
 
         {/* KPI 2: Active Guest Volume */}
         <div className="border border-white/5 bg-[#121212] p-6 shadow-sm transition-all duration-300">
-          <div className="flex items-center justify-between text-neutral-400 font-mono text-[10px] uppercase tracking-widest mb-4">
+          <div className="flex items-center justify-between text-neutral-400 font-mono text-xs font-semibold tracking-wider uppercase tracking-widest mb-4">
             <span>Active Guest Capacity</span>
             <Users className="w-4 h-4 text-gold-400" />
           </div>
@@ -101,7 +101,7 @@ export default function CommandCenter({
 
         {/* KPI 3: Curated Lookbook Menu Count */}
         <div className="border border-white/5 bg-[#121212] p-6 shadow-sm transition-all duration-300">
-          <div className="flex items-center justify-between text-neutral-400 font-mono text-[10px] uppercase tracking-widest mb-4">
+          <div className="flex items-center justify-between text-neutral-400 font-mono text-xs font-semibold tracking-wider uppercase tracking-widest mb-4">
             <span>Bespoke Menu Registry</span>
             <Utensils className="w-4 h-4 text-gold-400" />
           </div>
@@ -154,11 +154,11 @@ export default function CommandCenter({
 
                     <div className="bg-[#121212] border border-white/5 p-6 hover:border-gold-400/20 transition-all duration-300">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                        <span className="font-mono text-[10px] text-neutral-400 font-medium tracking-wider flex items-center gap-1.5">
+                        <span className="font-mono text-xs font-semibold tracking-wider text-neutral-400 font-medium tracking-wider flex items-center gap-1.5">
                           <Calendar className="w-3.5 h-3.5 text-gold-400" />
                           {formattedDate}
                         </span>
-                        <span className={`inline-block px-2 py-0.5 text-[10px] uppercase tracking-wider font-mono border rounded-none ${
+                        <span className={`inline-block px-2 py-0.5 text-xs font-semibold tracking-wider uppercase tracking-wider font-mono border rounded-none ${
                           booking.status === EventStatus.DepositPaid
                             ? "bg-amber-400/5 text-amber-400 border-amber-400/20"
                             : booking.status === EventStatus.ContractSigned

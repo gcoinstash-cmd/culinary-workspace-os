@@ -142,7 +142,7 @@ export default function BookingManager({
           </div>
           <button
             onClick={startAddNew}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-xs uppercase tracking-wider font-semibold transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] uppercase tracking-wider font-semibold transition-colors"
           >
             <Plus className="w-3.5 h-3.5" /> New Booking
           </button>
@@ -169,7 +169,7 @@ export default function BookingManager({
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-wider">
+                  <span className="font-mono text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-wider">
                     {booking.eventDate}
                   </span>
                   <span className={`px-2 py-0.5 text-[9px] uppercase tracking-wider font-mono border ${
@@ -202,7 +202,7 @@ export default function BookingManager({
 
                   <div className="text-right">
                     {isClientView ? (
-                      <span className="text-[10px] font-mono uppercase text-neutral-500 italic flex items-center gap-1">
+                      <span className="text-xs font-semibold tracking-wider font-mono uppercase text-neutral-500 italic flex items-center gap-1">
                         <EyeOff className="w-3 h-3 text-neutral-600" /> Protected
                       </span>
                     ) : (
@@ -247,7 +247,7 @@ export default function BookingManager({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Event Title
                 </label>
                 <input
@@ -261,7 +261,7 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Client Name
                 </label>
                 <input
@@ -275,7 +275,7 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Booking Date
                 </label>
                 <input
@@ -288,7 +288,7 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Event Status
                 </label>
                 <select
@@ -305,7 +305,7 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Guest Volume (Covers)
                 </label>
                 <input
@@ -319,7 +319,7 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                   Price Per Plate ($)
                 </label>
                 <input
@@ -334,7 +334,7 @@ export default function BookingManager({
             </div>
 
             <div className="space-y-1">
-              <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+              <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                 Venue Address
               </label>
               <input
@@ -348,7 +348,7 @@ export default function BookingManager({
             </div>
 
             <div className="space-y-1">
-              <label className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+              <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-neutral-400">
                 Internal Chef Note & Requests
               </label>
               <textarea
@@ -362,7 +362,7 @@ export default function BookingManager({
 
             {/* Relations Link section */}
             <div className="space-y-3 pt-2">
-              <span className="block text-[11px] font-mono uppercase tracking-wider text-neutral-400">
+              <span className="block text-xs font-semibold font-mono uppercase tracking-wider text-neutral-400">
                 Link Course Menu Items (Bespoke Menu DB Relation)
               </span>
               <p className="text-[11.5px] text-neutral-400 mb-2">
@@ -389,7 +389,7 @@ export default function BookingManager({
                       </div>
                       <div className="truncate">
                         <p className="text-xs text-white truncate font-serif font-medium">{item.name}</p>
-                        <span className="text-[10px] text-neutral-400 font-mono uppercase">{item.category}</span>
+                        <span className="text-xs font-semibold tracking-wider text-neutral-400 font-mono uppercase">{item.category}</span>
                       </div>
                     </div>
                   );
@@ -410,7 +410,7 @@ export default function BookingManager({
               </button>
               <button
                 type="submit"
-                className="flex items-center gap-1 px-6 py-2.5 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-xs uppercase tracking-widest font-semibold transition-colors"
+                className="flex items-center gap-1 px-6 py-2.5 bg-gold-400 hover:bg-gold-500 text-neutral-900 font-mono text-base font-semibold min-h-[44px] uppercase tracking-widest font-semibold transition-colors"
               >
                 <Save className="w-4 h-4" /> Save Record
               </button>
@@ -456,7 +456,7 @@ export default function BookingManager({
             {/* Metadata Summary Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-b border-white/5 pb-8">
               <div className="space-y-1.5">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
                   <Calendar className="w-3.5 h-3.5 text-neutral-500" /> Dining Date
                 </span>
                 <span className="text-lg font-serif text-white">
@@ -470,14 +470,14 @@ export default function BookingManager({
               </div>
 
               <div className="space-y-1.5">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
                   <Users className="w-3.5 h-3.5 text-neutral-500" /> Guest Volume
                 </span>
                 <span className="text-lg font-serif text-white">{selectedBooking.guestCount} Covers</span>
               </div>
 
               <div className="space-y-1.5">
-                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
+                <span className="text-xs font-semibold tracking-wider font-mono text-neutral-500 uppercase tracking-widest block flex items-center gap-1">
                   <Tag className="w-3.5 h-3.5 text-neutral-500" /> Event Status
                 </span>
                 <span className="font-mono text-xs text-gold-400 uppercase tracking-widest">
@@ -492,7 +492,7 @@ export default function BookingManager({
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#0a0a0a]/50 p-6 border border-white/5">
                 <div>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wide block">Price Per Plate</span>
+                  <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-wide block">Price Per Plate</span>
                   {isClientView ? (
                     <span className="text-sm font-mono text-neutral-400 italic">Protected</span>
                   ) : (
@@ -503,7 +503,7 @@ export default function BookingManager({
                 </div>
 
                 <div>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wide block">Total Valuation</span>
+                  <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-wide block">Total Valuation</span>
                   {isClientView ? (
                     <span className="text-sm font-mono text-neutral-400 italic">Protected</span>
                   ) : (
@@ -514,7 +514,7 @@ export default function BookingManager({
                 </div>
 
                 <div>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wide block">Chef Deposit Due (50%)</span>
+                  <span className="text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-wide block">Chef Deposit Due (50%)</span>
                   {isClientView ? (
                     <span className="text-sm font-mono text-neutral-400 italic">Protected</span>
                   ) : (
@@ -579,7 +579,7 @@ export default function BookingManager({
                           </span>
                           <h5 className="font-serif text-sm text-white truncate">{item.name}</h5>
                           {!isClientView && (
-                            <p className="text-[10px] text-neutral-500 font-mono">
+                            <p className="text-xs font-semibold tracking-wider text-neutral-500 font-mono">
                               Cost per serving: ${item.costPerServing.toFixed(2)}
                             </p>
                           )}
@@ -597,7 +597,7 @@ export default function BookingManager({
               <p className="text-neutral-500 text-sm">Select an active reservation from the database log.</p>
               <button
                 onClick={startAddNew}
-                className="text-xs text-gold-400 font-mono tracking-wider uppercase hover:underline"
+                className="text-base font-semibold min-h-[44px] text-gold-400 font-mono tracking-wider uppercase hover:underline"
               >
                 Or establish a new contract now
               </button>
